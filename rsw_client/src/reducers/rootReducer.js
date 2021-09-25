@@ -3,10 +3,9 @@ export default function rootReducer(
     action
   ) {
     switch (action.type) {
-      case "ADD_WORDS":
+      case "SHOW_WORDS":
         return {
-          ...state,
-          words: [...state.words, action.words]
+          state
         };
   
       default:
