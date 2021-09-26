@@ -7,13 +7,13 @@ class TimerComponent extends Component {
     this.state = {
       timer: '',
       countdown: '',
-      words: "More bounce to the ounce!"
+      sentence: ''
     }
   }
 
   handleChange = (event) => {
     this.setState({
-      timer: event.target.value
+      [event.target.name]: event.target.value
     })
   }
 
@@ -28,13 +28,17 @@ class TimerComponent extends Component {
   }
 
   handleClick = () => {
-    setTimeout(() => console.log(this.state.words), this.state.timer * 60000);
+    setTimeout(() => console.log(this.state.sentence), this.state.timer * 60000);
     this.callClear()
     this.handleCountdown()
   }
 
   callClear = () => {
     clearInterval(this.intervalID)
+  }
+
+  clearText = () => {
+    this.setState({sentence: ''})
   }
 
 
@@ -45,6 +49,8 @@ class TimerComponent extends Component {
           <label>
             Change Timer Value To Desired Number Of Minutes:
             <input type="text" value={this.state.timer} name="timer" onChange={this.handleChange} />
+            <textarea value={this.state.sentence} name="sentence" onChange={this.handleChange} />
+            <button onClick={this.clearText}>Clear Text</button>
           </label>
         </form>
         <button onClick={this.handleClick}>Click To Begin The Countdown</button>
