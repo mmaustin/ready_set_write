@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import TimerComponent from './TimerComponent';
+import TimerComponent from './TimerComponent';
 import DisplayComponent from './DisplayComponent';
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
 
     return (
       <div>
-        {/*<TimerComponent />*/}
+        <TimerComponent />
         <DisplayComponent />
       </div>
     );

@@ -7,7 +7,11 @@ export default function sentencesReducer(
         return {
           sentences: action.sentences
         };
-  
+      case "ADD_SENTENCE":
+        return{
+          ...state,
+          sentences: action.sentence,
+        }
       default:
         return state;
     }

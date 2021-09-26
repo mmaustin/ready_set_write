@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { addSentence } from "../actions/sentenceActions";
 
 class TimerComponent extends Component {
 
@@ -7,7 +9,7 @@ class TimerComponent extends Component {
     this.state = {
       timer: '',
       countdown: '',
-      sentence: ''
+      text: ''
     }
   }
 
@@ -28,7 +30,7 @@ class TimerComponent extends Component {
   }
 
   handleClick = () => {
-    setTimeout(() => console.log(this.state.sentence), this.state.timer * 60000);
+    setTimeout(() => this.props.addSentence(this.state.text), this.state.timer * 60000);
     this.callClear()
     this.handleCountdown()
   }
@@ -49,7 +51,7 @@ class TimerComponent extends Component {
           <label>
             Change Timer Value To Desired Number Of Minutes:
             <input type="text" value={this.state.timer} name="timer" onChange={this.handleChange} />
-            <textarea value={this.state.sentence} name="sentence" onChange={this.handleChange} />
+            <textarea value={this.state.text} name="text" onChange={this.handleChange} />
             <button onClick={this.clearText}>Clear Text</button>
           </label>
         </form>
@@ -60,4 +62,8 @@ class TimerComponent extends Component {
   }
 }
 
-export default TimerComponent;
+/*function mapDispatchToProps(dispatch) {
+    return { addSentence: () => dispatch(addSentence()) };
+  }*/
+
+export default connect(null, {addSentence})(TimerComponent);
