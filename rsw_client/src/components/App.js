@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
+import TimerComponent from './TimerComponent';
 
 class App extends Component {
   constructor(){
@@ -14,11 +15,12 @@ class App extends Component {
   }
 
   render() {
-      console.log(this.props.stated)
+      //console.log(this.props.stated)
     return (
       <div>
         <button onClick={this.handleOnClick}>Click</button>
         <p>{this.props.stated}</p>
+        <TimerComponent />
       </div>
     );
   }
