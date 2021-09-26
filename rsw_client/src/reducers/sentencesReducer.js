@@ -1,11 +1,11 @@
 export default function sentencesReducer(
-    state = { words: "and now for some words from our sponsor"},
+    state = { sentences: []},
     action
   ) {
     switch (action.type) {
-      case "SHOW_WORDS":
+      case "FETCH_SENTENCES":
         return {
-          words: state.words + "!"
+          sentences: action.sentences
         };
   
       default:
