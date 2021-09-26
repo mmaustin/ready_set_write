@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { fetchSentences } from "../actions/sentenceActions";
 
 class DisplayComponent extends Component {
-  handleOnClick() {
+  componentDidMount() {
     this.props.fetchSentences();
   }
 
@@ -15,7 +15,7 @@ class DisplayComponent extends Component {
 
     return (
       <div>
-        <button onClick={(event) => this.handleOnClick(event)}>Click Me and Pray!</button>
+        {/*<button onClick={(event) => this.handleOnClick(event)}>Click Me and Pray!</button>*/}
         {sentences}
       </div>
     );
