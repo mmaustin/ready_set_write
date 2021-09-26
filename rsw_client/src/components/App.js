@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 
-export default class App extends Component {
+class App extends Component {
   constructor(){
       super();
       this.state = {showWords: "here we go again"}
   }
 
+  handleOnClick = () => {
+    this.props.dispatch({
+      type: "SHOW_WORDS",
+    });
+  }
+
   render() {
-      //const phrase = this.props.somewWords
+      console.log(this.props.stated)
     return (
-      <div >
-        {this.state.showWords}
+      <div>
+        <button onClick={this.handleOnClick}>Click</button>
+        <p>{this.props.stated}</p>
       </div>
     );
   }
 };
 
-const mapStateToProps = state => ({ somewWords: state.words })
+const mapStateToProps = state => ({ stated: state.words })
 
-
-connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(App);
