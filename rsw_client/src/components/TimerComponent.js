@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { addSentence } from "../actions/sentenceActions";
+import  {addSentence}  from "../actions/sentenceActions";
 
 class TimerComponent extends Component {
 
@@ -30,7 +30,7 @@ class TimerComponent extends Component {
   }
 
   handleClick = () => {
-    setTimeout(() => this.props.addSentence(this.state.text), this.state.timer * 60000);
+    setTimeout(() => this.props.addSentence({title: "same title", text: this.state.text}), this.state.timer * 60000);
     this.callClear()
     this.handleCountdown()
   }

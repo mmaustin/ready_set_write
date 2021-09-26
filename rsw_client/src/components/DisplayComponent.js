@@ -8,10 +8,16 @@ class DisplayComponent extends Component {
     this.props.fetchSentences();
   }
 
+  //const sentences = this.props.sentences.map((sent) => (
+  //  <li key={sent.id}>{sent.text}</li>
+//));
+
   render() {
+      console.log(this.props.sentences)
+      //const s = this.props.sentences.text
     const sentences = this.props.sentences.map((sent) => (
-      <li key={sent.id}>{sent.text}</li>
-    ));
+          <li key={sent.id}>{sent.text}</li>
+      ));
 
     return (
       <div>
