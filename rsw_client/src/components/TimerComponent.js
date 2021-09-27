@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import  {addSentence}  from "../actions/sentenceActions";
 import TextArea from './TextArea';
+import CountdownComponent from './CountdownComponent';
 
 class TimerComponent extends Component {
 
@@ -58,7 +59,8 @@ class TimerComponent extends Component {
           </label>
         </form>
         <button onClick={this.handleClick}>Click To Begin The Countdown</button>
-        {this.state.countdown}
+        {/*this.state.countdown*/}
+        <CountdownComponent countdown={this.state.countdown}/>
       </div>
     );
   }
