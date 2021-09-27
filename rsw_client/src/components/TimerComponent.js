@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import  {addSentence}  from "../actions/sentenceActions";
+import TextArea from './TextArea';
 
 class TimerComponent extends Component {
 
@@ -51,7 +52,8 @@ class TimerComponent extends Component {
           <label>
             Change Timer Value To Desired Number Of Minutes:
             <input type="text" value={this.state.timer} name="timer" onChange={this.handleChange} />
-            <textarea value={this.state.text} name="text" onChange={this.handleChange} />
+            {/*<textarea value={this.state.text} name="text" onChange={this.handleChange} />*/}
+            <TextArea text={this.state.text} onchange={this.handleChange}/>
             <button onClick={this.clearText}>Clear Text</button>
           </label>
         </form>
