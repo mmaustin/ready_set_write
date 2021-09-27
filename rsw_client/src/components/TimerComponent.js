@@ -62,8 +62,5 @@ class TimerComponent extends Component {
   }
 }
 
-/*function mapDispatchToProps(dispatch) {
-    return { addSentence: () => dispatch(addSentence()) };
-  }*/
 
 export default connect(null, {addSentence})(TimerComponent);

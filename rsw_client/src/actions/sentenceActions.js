@@ -17,3 +17,11 @@ export function fetchSentences() {
         .then((sentence) => dispatch({ type: "ADD_SENTENCE", sentence }));
     };
   }
+
+  export function deleteSentence(id) {
+    return (dispatch) => {
+      fetch(`http://localhost:3000/sentences/${id}`, { method: 'DELETE' })
+      dispatch({ type: "DELETE_SENTENCE", payload: id })
+    };
+  }
+
