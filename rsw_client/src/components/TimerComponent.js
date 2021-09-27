@@ -30,7 +30,7 @@ class TimerComponent extends Component {
   }
 
   handleClick = () => {
-    setTimeout(() => this.props.addSentence({title: "same title", text: this.state.text}), this.state.timer * 60000);
+    setTimeout(() => this.props.addSentence({text: this.state.text}), this.state.timer * 60000);
     this.callClear()
     this.handleCountdown()
   }
