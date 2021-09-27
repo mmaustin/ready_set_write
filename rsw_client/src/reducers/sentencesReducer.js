@@ -12,6 +12,8 @@ export default function sentencesReducer(
           ...state,
           sentences: [...state.sentences, action.sentence]
         }
+        case "DELETE_SENTENCE":
+          return { sentences: state.sentences.filter((sentence) => sentence.id !== action.payload)}  
       default:
         return state;
     }

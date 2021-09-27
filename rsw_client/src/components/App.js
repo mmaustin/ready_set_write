@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TimerComponent from './TimerComponent';
-import DisplayComponent from './DisplayComponent';
+import SentencesContainer from './SentencesContainer';
 
 class App extends Component {
 
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div>
         <TimerComponent />
-        <DisplayComponent />
+        <SentencesContainer />
       </div>
     );
   }
