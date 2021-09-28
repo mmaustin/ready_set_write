@@ -5,6 +5,7 @@ import TextArea from './TextArea';
 import CountdownComponent from './CountdownComponent';
 import CountdownButton from './CountdownButton';
 import ClearTextButton from './ClearText';
+import TimerInput from './TimerInput';
 
 class TimerComponent extends Component {
 
@@ -44,8 +45,10 @@ class TimerComponent extends Component {
   }
 
   clearText = () => {
-    this.setState({text: '',
-                   timer: '',
+    this.setState(
+      {text: '',
+       timer: '',
+       countdown: ''
     })
   }
 
@@ -55,8 +58,9 @@ class TimerComponent extends Component {
       <div>
         
           
-            Change Timer Value To Desired Number Of Minutes:
-            <input type="text" value={this.state.timer} name="timer" onChange={this.handleChange} />
+        Change Timer Value To Desired Number Of Minutes:
+        <TimerInput timerValue={this.state.timer} timerTracker={this.handleChange} />
+            {/*<input type="text" value={this.state.timer} name="timer" onChange={this.handleChange}/>*/}
             {/*<textarea value={this.state.text} name="text" onChange={this.handleChange} />*/}
         <TextArea text={this.state.text} onchange={this.handleChange}/>
         <ClearTextButton clearText={this.clearText}/>
