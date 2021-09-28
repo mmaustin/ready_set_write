@@ -56,21 +56,13 @@ class TimerComponent extends Component {
   render() {
     return (
       <div>
-        
-          
         Change Timer Value To Desired Number Of Minutes:
-        <TimerInput timerValue={this.state.timer} timerTracker={this.handleChange} />
-            {/*<input type="text" value={this.state.timer} name="timer" onChange={this.handleChange}/>*/}
-            {/*<textarea value={this.state.text} name="text" onChange={this.handleChange} />*/}
+        <TimerInput timerValue={this.state.timer} timerTracker={this.handleChange}/>
+        Enter Text:
         <TextArea text={this.state.text} onchange={this.handleChange}/>
-        <ClearTextButton clearText={this.clearText}/>
-            {/*<button onClick={this.clearText}>Clear Text</button>*/}
-          
-        
         <CountdownButton beginCountdown={this.handleClick}/>
-        {/*<button onClick={this.handleClick}>Click To Begin The Countdown</button>*/}
-        {/*this.state.countdown*/}
         <CountdownComponent countdown={this.state.countdown}/>
+        <ClearTextButton clearText={this.clearText}/>
       </div>
     );
   }
