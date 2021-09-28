@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import Sentence from './Sentence'
+import Sentences from './Sentences'
 
 import { fetchSentences } from "../actions/sentenceActions";
 
@@ -11,13 +11,14 @@ class SentencesContainer extends Component {
 
 
   
-    renderSentences = () =>
+/*  renderSentences = () => 
     this.props.sentences.map((sentence) => <Sentence key={sentence.id} sentence={sentence} />);
-
+*/
   render(){
     return (
       <div>
-        {this.renderSentences()}
+        <Sentences sentenceList={this.props.sentences}/>
+        {/*this.renderSentences()*/}
       </div>
     );
   }
