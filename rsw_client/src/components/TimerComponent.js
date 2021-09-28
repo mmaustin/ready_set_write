@@ -4,6 +4,7 @@ import  {addSentence}  from "../actions/sentenceActions";
 import TextArea from './TextArea';
 import CountdownComponent from './CountdownComponent';
 import CountdownButton from './CountdownButton';
+import ClearTextButton from './ClearText';
 
 class TimerComponent extends Component {
 
@@ -43,22 +44,25 @@ class TimerComponent extends Component {
   }
 
   clearText = () => {
-    this.setState({sentence: ''})
+    this.setState({text: '',
+                   timer: '',
+    })
   }
 
 
   render() {
     return (
       <div>
-        <form> {/*onSubmit={this.handleSubmit}>*/}
-          <label>
+        
+          
             Change Timer Value To Desired Number Of Minutes:
             <input type="text" value={this.state.timer} name="timer" onChange={this.handleChange} />
             {/*<textarea value={this.state.text} name="text" onChange={this.handleChange} />*/}
         <TextArea text={this.state.text} onchange={this.handleChange}/>
-            <button onClick={this.clearText}>Clear Text</button>
-          </label>
-        </form>
+        <ClearTextButton clearText={this.clearText}/>
+            {/*<button onClick={this.clearText}>Clear Text</button>*/}
+          
+        
         <CountdownButton beginCountdown={this.handleClick}/>
         {/*<button onClick={this.handleClick}>Click To Begin The Countdown</button>*/}
         {/*this.state.countdown*/}
