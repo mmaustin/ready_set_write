@@ -45,10 +45,10 @@ class TimerComponent extends Component {
   }
 
   clearText = () => {
-    this.setState(
-      {text: '',
-       timer: '',
-       countdown: ''
+    this.setState({
+      text: '',
+      timer: '',
+      countdown: ''
     })
   }
 
