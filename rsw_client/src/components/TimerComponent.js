@@ -6,6 +6,7 @@ import CountdownComponent from './CountdownComponent';
 import CountdownButton from './CountdownButton';
 import ClearTextButton from './ClearText';
 import TimerInput from './TimerInput';
+import SentencesContainer from './SentencesContainer';
 
 class TimerComponent extends Component {
 
@@ -63,6 +64,7 @@ class TimerComponent extends Component {
         <CountdownButton beginCountdown={this.handleClick}/>
         <CountdownComponent countdown={this.state.countdown}/>
         <ClearTextButton clearText={this.clearText}/>
+        <SentencesContainer />
       </div>
     );
   }
