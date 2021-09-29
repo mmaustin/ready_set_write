@@ -7,6 +7,7 @@ import CountdownButton from './CountdownButton';
 import ClearTextButton from './ClearText';
 import TimerInput from './TimerInput';
 import SentencesContainer from './SentencesContainer';
+import NavBar from './NavBar';
 
 class TimerComponent extends Component {
 
@@ -57,7 +58,10 @@ class TimerComponent extends Component {
   render() {
     return (
       <div>
+        <NavBar />
+        <p>
         Change Timer Value To Desired Number Of Minutes:
+        </p>
         <TimerInput timerValue={this.state.timer} timerTracker={this.handleChange}/>
         Enter Text:
         <TextArea text={this.state.text} onchange={this.handleChange}/>
