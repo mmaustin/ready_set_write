@@ -5,7 +5,7 @@ const link = {
     width: "100px",
     padding: "12px",
     margin: "0 6px 6px",
-    background: "blue",
+    background: 'gray',
     textDecoration: "none",
     color: "white",
   };
@@ -13,7 +13,7 @@ const link = {
 class NavBar extends Component {
     render(){
         return (
-            <div>
+            <div className='navlink'>
                 <NavLink
                     to="/"
                     exact

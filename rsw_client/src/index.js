@@ -7,6 +7,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import thunk from "redux-thunk";
 import sentencesReducer from "./reducers/sentencesReducer";
 import App from "./components/App"
+import './components/index.css';
+
 
 const store = createStore(sentencesReducer, composeWithDevTools(applyMiddleware(thunk)));
 
