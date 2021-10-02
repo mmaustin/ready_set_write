@@ -11,7 +11,7 @@ const Home = () => (
     </div>
     <div id='testimonials'>
       <p className='testimonial'>"RSW helped me to write a whale of a novel!" Merman Hellville</p>
-      <p className='testimonial'>"My clients demand that I use Ready Set Write, whenever I'm crafting legal documents on their behalf." Noted, but annonymous, Appellate Attorney</p>
+      <p className='testimonial'>"My clients demand that I use Ready Set Write, whenever I'm crafting legal documents on their behalf." Noted, Anonymous Appellate Attorney</p>
     </div>
   </div>
 );
