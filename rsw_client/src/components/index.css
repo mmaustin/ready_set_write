@@ -70,13 +70,50 @@
     flex-flow: row wrap;
 }
 
-/*image {
-    background-image: url('https://images.unsplash.com/photo-1576611209860-e3ad12547e8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80');
-    background-position: center;
-    background-repeat: no-repeat;
-    border: 1px solid green;
-    width: 50%;
-    height: 200px;
-    margin: 0;
+/* Sentences page styles */
 
-}*/
+#timer-container {
+    border: 1px dotted blue;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+#minutes-label {
+    font-size: 20px;
+}
+
+.countdown {
+    width: 20%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+#text-area-div {
+    margin-top: 20px;
+}
+
+#clear-text-button {
+    margin-top: 20px;
+}
+
+textarea {
+    height: 150px;
+    width: 400px;
+    border: 1px solid blue;
+}
+
+#sentence-container {
+    width: 50%;
+    margin-top: 40px;
+}
+
+li {
+    list-style: none;
+}
+

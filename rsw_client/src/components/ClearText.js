@@ -1,7 +1,7 @@
 import React from "react";
 
 const ClearTextButton = ({ clearText }) => (
-  <div>
+  <div id='clear-text-button'>
     <button onClick={clearText}>Clear Fields</button>
   </div>
 );

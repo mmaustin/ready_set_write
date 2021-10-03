@@ -59,18 +59,20 @@ class TimerComponent extends Component {
     return (
       <div>
         <NavBar />
-        <p id='test-text'>
-        Change Timer Value To Desired Number Of Minutes:
-        </p>
-        <TimerInput timerValue={this.state.timer} timerTracker={this.handleChange}/>
-        Enter Text:
-        <TextArea text={this.state.text} onchange={this.handleChange}/>
-        <div className='countdown'>
-          <CountdownButton beginCountdown={this.handleClick}/>
-          <CountdownComponent countdown={this.state.countdown}/>
+        <div id='timer-container'>
+          <TimerInput timerValue={this.state.timer} timerTracker={this.handleChange}/>
+          <div className='countdown'>
+            <CountdownButton beginCountdown={this.handleClick}/>
+            <CountdownComponent countdown={this.state.countdown}/>
+          </div>
+          <div id='text-area-div'>
+            <TextArea text={this.state.text} onchange={this.handleChange}/>
+          </div>
+          <ClearTextButton clearText={this.clearText}/>
+          <div id='sentence-container'>
+            <SentencesContainer />
+          </div>
         </div>
-        <ClearTextButton clearText={this.clearText}/>
-        <SentencesContainer />
       </div>
     );
   }

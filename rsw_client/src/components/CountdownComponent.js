@@ -1,9 +1,7 @@
 import React from "react";
 
 const CountdownComponent = ({ countdown }) => (
-  <div style={{border: "dotted blue", height: "50px"}}>
-    <p>{countdown}</p>
-  </div>
+  <p style={{border: "1px solid blue", height: "25px", width: "50px"}}>{countdown}</p>
 );
 
 export default CountdownComponent;
