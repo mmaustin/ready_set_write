@@ -1,4 +1,4 @@
-export function fetchSentences() {
+export const fetchSentences = () => {
     return (dispatch) => {
       fetch("http://localhost:3000/sentences")
         .then((response) => response.json())
@@ -6,7 +6,7 @@ export function fetchSentences() {
     };
   }
 
-  export function addSentence(sentence) {
+  export const addSentence = (sentence) => {
     return (dispatch) => {
       fetch("http://localhost:3000/sentences", {
         method: 'POST',
@@ -18,7 +18,7 @@ export function fetchSentences() {
     };
   }
 
-  export function deleteSentence(id) {
+  export const deleteSentence = (id) => {
     return (dispatch) => {
       fetch(`http://localhost:3000/sentences/${id}`, { method: 'DELETE' })
       dispatch({ type: "DELETE_SENTENCE", payload: id })
