@@ -6,7 +6,6 @@ const About = () => (
   <div>
     <NavBar />
     <div id='about-container'>
-      <image></image>
       <p id='about-para'>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I think of writing as an exercise, an activity. Before any activity, one must warm up. Enter, Ready Set Write. Often &nbsp;
         the most difficult thing about writing is simply getting &nbsp; started.  RSW was designed
