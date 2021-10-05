@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-//import TimerComponent from './TimerComponent';
-//import SentencesContainer from './SentencesContainer';
-import Router from './Router'
+import RouterComponent from './RouterComponent';
 
 class App extends Component {
 
@@ -10,9 +8,7 @@ class App extends Component {
 
     return (
       <div>
-        {/*<TimerComponent />*/}
-        <Router />
-        {/*<SentencesContainer />*/}
+        <RouterComponent />
       </div>
     );
   }
