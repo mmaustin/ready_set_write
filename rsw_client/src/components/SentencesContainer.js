@@ -10,28 +10,20 @@ class SentencesContainer extends Component {
   }
 
 
-  
-/*  renderSentences = () => 
-    this.props.sentences.map((sentence) => <Sentence key={sentence.id} sentence={sentence} />);
-*/
   render(){
     return (
       <div>
         <Sentences sentenceList={this.props.sentences}/>
-        {/*this.renderSentences()*/}
       </div>
     );
   }
 } 
 
-function mapDispatchToProps(dispatch) {
-  return { fetchSentences: () => dispatch(fetchSentences()) };
-}
 
 function mapStateToProps(state) {
   return { sentences: state.sentences };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SentencesContainer);
+export default connect(mapStateToProps, {fetchSentences})(SentencesContainer);
 
 
