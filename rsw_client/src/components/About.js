@@ -3,16 +3,17 @@ import NavBar from "./NavBar";
 
 
 const About = () => (
-  <div>
+  <div id="about-background">
     <NavBar />
     <div id='about-container'>
       <p id='about-para'>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I think of writing as an exercise, an activity. Before any activity, one must warm up. Enter, Ready Set Write. Often &nbsp;
-        the most difficult thing about writing is simply getting &nbsp; started.  RSW was designed
-        to help writers of all ablilities to block out distractions and focus their minds onto the challenge
-        that is writing. Simply enter your desired number &nbsp; of minutes, click the countdown button, and 
-        start writing. &nbsp; My studies have found that the coupling of time pressure &nbsp; and instant display of product increases one&#39;s
-        focus exponentially. Give it a try for yourself!
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Writing is not a passive endeavor; it is mental exercise.
+        Before any exercise, one must warm up. Ready Set Write&nbsp; was created with this in mind. Oftentimes,
+        the most difficult thing about writing is getting started. RSW was designed
+        to help writers of all ablilities block out distractions and focus their minds. Simply enter your desired number of minutes,
+        click the countdown button, and start writing. My studies have found that the coupling of time pressure 
+        and instant display of product increases one&#39;s
+        focus exponentially. Give&nbsp; it a try for yourself!
       </p>
     </div>
   </div>
