@@ -11,3 +11,5 @@ Having spent many years writing a novel, I understand the difficulty involved in
 4) With the servers running, you can then navigate to the Home, About, or Sentences pages.  On the sentences page, you will be able to enter your desired number of timed minutes, start the countdown, and begin wrting in the space provided.  Your sentence or fragment or phrase will appear on the page when the timer reaches zero.
 
 Happy writing!
+
+Licensed under the [MIT License](LICENSE).
