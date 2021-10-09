@@ -30,7 +30,7 @@ class NavBar extends Component {
                     to="/sentences"
                     exact
                     style={link}>
-                    Create Sentences
+                    Sentences
                 </NavLink>
             </div>
         )
