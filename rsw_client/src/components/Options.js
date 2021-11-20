@@ -1,5 +1,6 @@
-export const sentenceTopics = ['presidents', 'basketball', 'cosmology', 'sitcoms', 'war', 'politics',
-     'covid', 'fruit', 'your favorite song', 'movies']
+export const sentenceTopics = ['PRESIDENTS', 'BASKETBALL', 'COSMOLOGY', 'SITCOMS', 'WAR', 'POLITICS',
+    'COVID', 'FRUIT', 'YOUR FAVORITE SONG', 'MOVIES', 'CLIMATE CHANGE', 'YOUR FAVORITE BOOK',
+    'JAZZ', 'CIVIL WAR', 'SUPREME COURT', 'SNOW STORMS', 'SPACE X', 'PROCRASTINATION']
 
 
 

@@ -22,9 +22,9 @@ class TimerComponent extends Component {
     }
   }
 
-  //chooseTopic = () => {
-  //  return this.state.topic[Math.floor(Math.random() * this.state.topic.length)]
-  //}
+  chooseTopic = () => {
+    this.setState({topic: sentenceTopics[Math.floor(Math.random() * sentenceTopics.length)]})
+  }
 
   handleChange = (event) => {
     this.setState({
@@ -72,7 +72,8 @@ class TimerComponent extends Component {
             <CountdownComponent countdown={this.state.countdown}/>
           </div>
           <div id='text-area-div'>
-            <TextArea text={this.state.text} onchange={this.handleChange} topic={this.state.topic}/>
+            <TextArea text={this.state.text} onchange={this.handleChange} topic={this.state.topic}
+            topicFunction={this.chooseTopic}/>
           </div>
           <ClearTextButton clearText={this.clearText}/>
           <div id='sentence-container'>
