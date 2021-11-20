@@ -8,6 +8,7 @@ import ClearTextButton from './ClearText';
 import TimerInput from './TimerInput';
 import SentencesContainer from './SentencesContainer';
 import NavBar from './NavBar';
+import {sentenceTopics} from './Options'
 
 class TimerComponent extends Component {
 
@@ -16,8 +17,13 @@ class TimerComponent extends Component {
     this.state = {
       timer: '',
       countdown: '',
-      text: ''
+      text: '',
+      topics: sentenceTopics
     }
+  }
+
+  chooseTopic = () => {
+    return Math.floor(Math.random() * this.state.topics.length)
   }
 
   handleChange = (event) => {
