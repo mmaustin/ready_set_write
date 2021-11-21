@@ -125,3 +125,7 @@ li {
     list-style: none;
 }
 
+#topic {
+    font-weight: bold;
+    color: blue;
+}
