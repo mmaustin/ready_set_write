@@ -67,8 +67,10 @@ class TimerComponent extends Component {
       <div>
         <NavBar />
         <div id='timer-container'>
-          <TimerInput timerValue={this.state.timer} timerTracker={this.handleChange}/>
-          <TopicContainer topic={this.state.topic} topicFunction={this.chooseTopic}/>
+          <div id='timer-and-topic'>
+            <TimerInput timerValue={this.state.timer} timerTracker={this.handleChange}/>
+            <TopicContainer topic={this.state.topic} topicFunction={this.chooseTopic}/>
+          </div>
           <div className='countdown'>
             <CountdownButton beginCountdown={this.handleClick}/>
             <CountdownComponent countdown={this.state.countdown}/>
