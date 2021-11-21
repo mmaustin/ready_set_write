@@ -74,13 +74,11 @@
 /* Sentences page styles */
 
 #timer-container {
-    border: 1px dotted blue;
     margin: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column;
-    background-color: bisque;
+    flex-flow: column; 
 }
 
 #minutes-label {
@@ -107,7 +105,7 @@
 textarea {
     height: 150px;
     width: 400px;
-    border: 1px solid blue;
+    border: 1px solid black;
 }
 
 #sentence-container {
