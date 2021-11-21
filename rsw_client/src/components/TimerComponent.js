@@ -9,6 +9,7 @@ import TimerInput from './TimerInput';
 import SentencesContainer from './SentencesContainer';
 import NavBar from './NavBar';
 import {sentenceTopics} from './Options'
+import TopicContainer from './TopicContainer';
 
 class TimerComponent extends Component {
 
@@ -67,13 +68,13 @@ class TimerComponent extends Component {
         <NavBar />
         <div id='timer-container'>
           <TimerInput timerValue={this.state.timer} timerTracker={this.handleChange}/>
+          <TopicContainer topic={this.state.topic} topicFunction={this.chooseTopic}/>
           <div className='countdown'>
             <CountdownButton beginCountdown={this.handleClick}/>
             <CountdownComponent countdown={this.state.countdown}/>
           </div>
           <div id='text-area-div'>
-            <TextArea text={this.state.text} onchange={this.handleChange} topic={this.state.topic}
-            topicFunction={this.chooseTopic}/>
+            <TextArea text={this.state.text} onchange={this.handleChange} />
           </div>
           <ClearTextButton clearText={this.clearText}/>
           <div id='sentence-container'>
