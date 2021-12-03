@@ -24,4 +24,3 @@ export const fetchSentences = () => {
       dispatch({ type: "DELETE_SENTENCE", payload: id })
     };
   }
-
