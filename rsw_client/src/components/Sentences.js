@@ -1,7 +1,6 @@
 import React from "react";
 import Sentence from './Sentence'
 
-/*
 const Sentences = ({ sentenceList }) => (
   <div>
     {sentenceList.map((sentence) => (
@@ -11,13 +10,14 @@ const Sentences = ({ sentenceList }) => (
 );
 
 export default Sentences;
-*/
 
 
+/*
 const Sentences = ({ sentenceList }) => (
   <div>
-    <Sentence key={sentenceList[0]} sentence={sentenceList[0]} />
+    <Sentence key={sentenceList.id} sentence={sentenceList} />
   </div>
 );
 
 export default Sentences;
+*/

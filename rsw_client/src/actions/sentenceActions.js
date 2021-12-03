@@ -6,6 +6,7 @@ export const fetchSentences = () => {
     };
   }
 
+/*
   export const fetchSentence = (id) => {
     return (dispatch) => {
       fetch(`http://localhost:3000/sentences/${id}`)
@@ -13,6 +14,7 @@ export const fetchSentences = () => {
       .then((sentence) => dispatch({type: 'FETCH_SENTENCE', payload: sentence}))
     };
   }
+*/
 
   export const addSentence = (sentence) => {
     return (dispatch) => {

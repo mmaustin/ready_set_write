@@ -7,10 +7,10 @@ export default function sentencesReducer(
         return {
           sentences: action.payload
         };
-      case "FETCH_SENTENCE":
+      /*case "FETCH_SENTENCE":
         return{
           sentences: action.payload
-        };
+        };*/
       case "ADD_SENTENCE":
         return{
           ...state,

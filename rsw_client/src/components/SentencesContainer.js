@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import Sentences from './Sentences'
 
 //import { fetchSentences } from "../actions/sentenceActions";
-import { fetchSentence } from "../actions/sentenceActions";
+import { fetchSentences } from "../actions/sentenceActions";
 
 class SentencesContainer extends Component {
   componentDidMount() {
-    this.props.fetchSentence(6);
+    this.props.fetchSentences();
   }
 
 
@@ -25,6 +25,6 @@ function mapStateToProps(state) {
   return { sentences: state.sentences };
 }
 
-export default connect(mapStateToProps, {fetchSentence})(SentencesContainer);
+export default connect(mapStateToProps, {fetchSentences})(SentencesContainer);
 
 
