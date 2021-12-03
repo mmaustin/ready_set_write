@@ -7,7 +7,7 @@ import { fetchSentence } from "../actions/sentenceActions";
 
 class SentencesContainer extends Component {
   componentDidMount() {
-    this.props.fetchSentence();
+    this.props.fetchSentence(6);
   }
 
 
