@@ -5,11 +5,11 @@ export default function sentencesReducer(
     switch (action.type) {
       case "FETCH_SENTENCES":
         return {
-          sentences: action.sentences
+          sentences: action.payload
         };
       case "FETCH_SENTENCE":
         return{
-          sentences: state.sentences.filter((sentence) => sentence.id === action.payload.id)
+          sentences: action.payload
         };
       case "ADD_SENTENCE":
         return{

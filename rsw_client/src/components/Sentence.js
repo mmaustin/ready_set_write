@@ -4,7 +4,6 @@ import  {deleteSentence}  from "../actions/sentenceActions";
 
 
 const Sentence = (props) => {
-  console.log(props.sentence.text)
   return (
     <li>
       <span style={{fontSize: '20px', fontWeight: 'bold'}}>{props.sentence.text}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

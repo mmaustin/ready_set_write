@@ -2,7 +2,7 @@ export const fetchSentences = () => {
     return (dispatch) => {
       fetch("http://localhost:3000/sentences")
         .then((response) => response.json())
-        .then((sentences) => dispatch({ type: "FETCH_SENTENCES", sentences }));
+        .then((sentences) => dispatch({ type: "FETCH_SENTENCES", payload: sentences }));
     };
   }
 
@@ -10,7 +10,7 @@ export const fetchSentences = () => {
     return (dispatch) => {
       fetch(`http://localhost:3000/sentences/${id}`)
       .then((response) => response.json())
-      .then((sentence) => dispatch({type: 'FETCH_SENTENCE', payload: sentence.id}))
+      .then((sentence) => dispatch({type: 'FETCH_SENTENCE', payload: sentence}))
     };
   }
 
