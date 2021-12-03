@@ -8,9 +8,8 @@ export const fetchSentences = () => {
 
   export const fetchSentence = (id) => {
     return (dispatch) => {
-      fetch(`http://localhost:3000/sentences/${id}`)
-      .then((response) => response.json())
-      .then((sentence) => dispatch({type: 'FETCH_SENTENCE', payload: sentence}))
+      fetch(`http://localhost:3000/sentences/${id}`, {method: 'GET'})
+      dispatch({type: 'FETCH_SENTENCE', payload: id})
     };
   }
 

@@ -7,12 +7,16 @@ export default function sentencesReducer(
         return {
           sentences: action.sentences
         };
+      case "FETCH_SENTENCE":
+        return{
+          sentences: state.sentences.filter((sentence) => sentence.id === action.payload)
+        };
       case "ADD_SENTENCE":
         return{
           ...state,
           sentences: [...state.sentences, action.sentence]
         }
-        case "DELETE_SENTENCE":
+      case "DELETE_SENTENCE":
           return { sentences: state.sentences.filter((sentence) => sentence.id !== action.payload)}  
       default:
         return state;
