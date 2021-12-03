@@ -2,6 +2,7 @@ import React from "react";
 import {connect} from 'react-redux'
 import  {deleteSentence}  from "../actions/sentenceActions";
 
+
 const Sentence = (props) => {
   return (
     <li>
