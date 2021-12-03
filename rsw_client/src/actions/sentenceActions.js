@@ -6,10 +6,10 @@ export const fetchSentences = () => {
     };
   }
 
-  export const fetchSentence = (id) => {
+  export const fetchSentence = () => {
     return (dispatch) => {
-      fetch(`http://localhost:3000/sentences/${id}`, {method: 'GET'})
-      dispatch({type: 'FETCH_SENTENCE', payload: id})
+      fetch(`http://localhost:3000/sentences/${6}`, {method: 'GET'})
+      dispatch({type: 'FETCH_SENTENCE', payload: 6})
     };
   }
 
