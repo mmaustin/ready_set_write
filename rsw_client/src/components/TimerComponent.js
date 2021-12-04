@@ -10,7 +10,6 @@ import SentencesContainer from './SentencesContainer';
 import NavBar from './NavBar';
 import {sentenceTopics} from './Options'
 import TopicContainer from './TopicContainer';
-import {findSentence} from '../actions/sentenceActions'
 
 class TimerComponent extends Component {
 
@@ -23,10 +22,6 @@ class TimerComponent extends Component {
       topic: sentenceTopics[Math.floor(Math.random() * sentenceTopics.length)],
       findId: 6
     }
-  }
-
-  sentenceFinder = () => {
-    this.props.findSentence(this.state.findId)
   }
 
   chooseTopic = () => {
@@ -95,4 +90,4 @@ class TimerComponent extends Component {
 }
 
 
-export default connect(null, {addSentence, findSentence})(TimerComponent);
+export default connect(null, {addSentence})(TimerComponent);
