@@ -10,6 +10,7 @@ import SentencesContainer from './SentencesContainer';
 import NavBar from './NavBar';
 import {sentenceTopics} from './Options'
 import TopicContainer from './TopicContainer';
+import SingleSentence from './SingleSentence';
 
 class TimerComponent extends Component {
 
@@ -82,6 +83,9 @@ class TimerComponent extends Component {
           <ClearTextButton clearText={this.clearText}/>
           <div id='sentence-container'>
             <SentencesContainer />
+          </div>
+          <div>
+            <SingleSentence findId={this.state.findId} />
           </div>
         </div>
       </div>
