@@ -19,7 +19,8 @@ class TimerComponent extends Component {
       timer: '',
       countdown: '',
       text: '',
-      topic: sentenceTopics[Math.floor(Math.random() * sentenceTopics.length)]
+      topic: sentenceTopics[Math.floor(Math.random() * sentenceTopics.length)],
+      findId: 6
     }
   }
 
