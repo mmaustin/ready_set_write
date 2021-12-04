@@ -7,7 +7,6 @@ const Sentence = (props) => {
   return (
     <li>
       <span style={{fontSize: '20px', fontWeight: 'bold'}}>{props.sentence.text}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <button>UPDATE</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button onClick={() => props.deleteSentence(props.sentence.id)}>DELETE</button>
     </li>
   );

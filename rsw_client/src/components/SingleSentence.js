@@ -6,13 +6,9 @@ class SingleSentence extends Component {
     
 
     render(){
-        let a = this.props.state.sentences.text
         return(
             <>
-                <button>Get Sentence</button>
-                <p>
-                    {a}
-                </p>
+                <button onClick={() => this.props.findSentence(this.props.findId)}>Get Sentence</button>
             </>
         )
     }
