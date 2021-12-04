@@ -34,3 +34,10 @@ export const fetchSentences = () => {
       dispatch({ type: "DELETE_SENTENCE", payload: id })
     };
   }
+
+  export const findSentence = id => {
+    return {
+      type: 'FIND_SENTENCE',
+      payload: id
+    }
+  }
