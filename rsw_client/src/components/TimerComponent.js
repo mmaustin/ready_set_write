@@ -39,7 +39,7 @@ class TimerComponent extends Component {
     this.setState({countdown: this.state.timer * 60})
     this.intervalID = setInterval(() => this.setState(previousState => {
       if (this.state.countdown >= 1) 
-      return {
+      return { 
         countdown: previousState.countdown - 1,
       }
     }), 1000)

@@ -4,7 +4,7 @@ class SentencesController < ApplicationController
   # GET /sentences
   def index
     @sentences = Sentence.all
-
+    #byebug
     render json: @sentences
   end
 
@@ -46,8 +46,6 @@ class SentencesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def sentence_params
-=begin      params.require(:sentence).permit(:title, :text)
-=end
       params.require(:sentence).permit(:title, :text)
     end
 end

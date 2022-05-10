@@ -14,7 +14,7 @@ const store = createStore(sentencesReducer, composeWithDevTools(applyMiddleware(
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>  
+    <Router>
       <App />
     </Router>  
   </Provider>,
